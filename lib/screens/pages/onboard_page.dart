@@ -58,7 +58,7 @@ class _OnboardPageState extends State<OnboardPage> {
                           child: Textwidgest(
                             text: name[index],
                             fontWeight: FontWeight.w600,
-                          ),//
+                          ),
                         )
                       ],
                     ),
