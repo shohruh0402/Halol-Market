@@ -20,21 +20,7 @@ class SignUpPage extends StatelessWidget {
               SizedBox(height: he(20)),
               Row(
                 children: [
-                  Icon(
-                    Icons.arrow_back_ios_rounded,
-                    color: Colorss.blueColor,
-                  ),
-                  SizedBox(width: wi(5)),
-                  GestureDetector(
-                    child: Textwidgest(
-                      text: 'Ortga',
-                      size: he(16),
-                      color: Colorss.blueColor,
-                    ),
-                    onTap: () {
-                      Navigator.pop(context);
-                    },
-                  ),
+                  BackWidgets(),
                   SizedBox(width: wi(40)),
                   Textwidgest(
                     text: 'Ro’yxatdan o’tish',

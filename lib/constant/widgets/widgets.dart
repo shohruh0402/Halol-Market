@@ -169,7 +169,11 @@ class SignUpContainer extends StatelessWidget {
   double withs;
   double iconSize;
   SignUpContainer(
-      {Key? key, required this.text, required this.img, this.withs = 166,this.iconSize = 40})
+      {Key? key,
+      required this.text,
+      required this.img,
+      this.withs = 166,
+      this.iconSize = 40})
       : super(key: key);
 
   @override
@@ -186,7 +190,9 @@ class SignUpContainer extends StatelessWidget {
             img,
             height: he(iconSize),
           ),
-          SizedBox(width: wi(10),),
+          SizedBox(
+            width: wi(10),
+          ),
           Textwidgest(
             text: text,
             size: he(17),
@@ -194,6 +200,33 @@ class SignUpContainer extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+}
+
+class BackWidgets extends StatelessWidget {
+  const BackWidgets({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Icon(
+          Icons.arrow_back_ios_rounded,
+          color: Colorss.blueColor,
+        ),
+        SizedBox(width: wi(5)),
+        GestureDetector(
+          child: Textwidgest(
+            text: 'Ortga',
+            size: he(16),
+            color: Colorss.blueColor,
+          ),
+          onTap: () {
+            Navigator.pop(context);
+          },
+        ),
+      ],
     );
   }
 }
