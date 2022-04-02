@@ -25,9 +25,14 @@ class SignUpOrSignInPage extends StatelessWidget {
               children: [
                 Padding(
                   padding: EdgeInsets.only(left: wi(280), top: he(40)),
-                  child: Textwidgest(
-                    text: 'Skip',
-                    color: Colors.white,
+                  child: GestureDetector(
+                    child: Textwidgest(
+                      text: 'Skip',
+                      color: Colors.white,
+                    ),
+                    onTap: () {
+                      Navigator.pushNamed(context, '/home');
+                    },
                   ),
                 ),
                 SizedBox(height: he(25)),
@@ -67,10 +72,16 @@ class SignUpOrSignInPage extends StatelessWidget {
                 ),
                 SizedBox(height: he(30)),
                 Center(
+                  child: GestureDetector(
                     child: Textwidgest(
-                  text: 'Akkauntga kirish',
-                  color: Colors.white,
-                ))
+                      text: 'Akkauntga kirish',
+                      color: Colors.white,
+                    ),
+                    onTap: () {
+                      Navigator.pushNamed(context, '/ac');
+                    },
+                  ),
+                )
               ],
             ),
           ),

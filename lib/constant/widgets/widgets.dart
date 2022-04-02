@@ -9,19 +9,21 @@ class Textwidgest extends StatelessWidget {
   FontWeight fontWeight;
   double top;
   Color color;
+  double left;
   Textwidgest(
       {Key? key,
       required this.text,
       this.size = 26,
       this.color = Colors.black,
       this.fontWeight = FontWeight.normal,
+      this.left = 0,
       this.top = 0})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(top: top),
+      padding: EdgeInsets.only(top: he(top),left: wi(left)),
       child: Text(
         text,
         style: TextStyle(fontSize: size, fontWeight: fontWeight, color: color),

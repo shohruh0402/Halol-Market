@@ -20,14 +20,20 @@ class _SmsVerifyPageState extends State<SmsVerifyPage> {
         children: [
           Padding(
             padding: EdgeInsets.only(top: he(48), left: wi(22)),
-            child: Icon(Icons.close),
+            child: GestureDetector(
+              child: Icon(Icons.close),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
           ),
           SizedBox(height: he(31)),
           Center(child: Textwidgest(text: 'SMS dagi kodni kiriting')),
           SizedBox(height: he(8)),
           Center(
             child: Textwidgest(
-              text: 'Kod ushbu raqamga yuborildi:            +998 90 123 45 67',
+              text:
+                  'Kod ushbu raqamga yuborildi:\n           +998 90 123 45 67',
               size: he(15),
               color: Colors.grey,
             ),

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:halolfarm/screens/pages/account_page.dart';
+import 'package:halolfarm/screens/pages/home_page.dart';
 import 'package:halolfarm/screens/pages/language_page.dart';
 import 'package:halolfarm/screens/pages/onboard_page.dart';
 import 'package:halolfarm/screens/pages/sign_up_page.dart';
@@ -29,6 +31,14 @@ class MyRouter {
       case '/sms':
         return MaterialPageRoute(
           builder: (_) => const SmsVerifyPage(),
+        );
+      case '/ac':
+        return MaterialPageRoute(
+          builder: (_) => const AccounPage(),
+        );
+      case '/home':
+        return MaterialPageRoute(
+          builder: (_) => const HomePage(),
         );
     }
   }

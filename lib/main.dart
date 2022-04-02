@@ -4,7 +4,7 @@ import 'package:halolfarm/routers/my_routers.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Locales.init(['en','uz']);
+  await Locales.init(['en', 'uz']);
   runApp(MyApp());
 }
 
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        initialRoute: '/signup',
+        initialRoute: '/home',
         onGenerateRoute: _forroute.onGenerateRoute,
       ),
     );

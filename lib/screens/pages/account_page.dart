@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:halolfarm/constant/components/input_comp.dart';
-import 'package:halolfarm/constant/constans_color.dart';
 import 'package:halolfarm/constant/widgets/widgets.dart';
 import 'package:halolfarm/sizeconfige/sizeconfig.dart';
 
-class SignUpPage extends StatelessWidget {
-  const SignUpPage({Key? key}) : super(key: key);
+class AccounPage extends StatefulWidget {
+  const AccounPage({Key? key}) : super(key: key);
 
+  @override
+  State<AccounPage> createState() => _accountPageState();
+}
+
+class _accountPageState extends State<AccounPage> {
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
@@ -23,7 +27,7 @@ class SignUpPage extends StatelessWidget {
                   BackWidgets(),
                   SizedBox(width: wi(40)),
                   Textwidgest(
-                    text: 'Ro’yxatdan o’tish',
+                    text: 'Akkauntga kirish',
                     size: he(18),
                     fontWeight: FontWeight.w600,
                   ),
@@ -31,22 +35,13 @@ class SignUpPage extends StatelessWidget {
               ),
               SizedBox(height: he(55)),
               TextFormField(
-                  decoration:
-                      InputComp.inputDecComp('To’liq ism-familiyangiz')),
-              SizedBox(height: he(31)),
-              TextFormField(
-                decoration: InputComp.inputDecComp('Tug’ilgan sanangiz'),
-              ),
-              SizedBox(height: he(31)),
-              TextFormField(
-                decoration: InputComp.inputDecComp('Telefon raqamingiz'),
-              ),
-              SizedBox(height: he(80)),
+                  decoration: InputComp.inputDecComp('Telefon raqamingiz')),
+              SizedBox(height: he(48)),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Container(
-                    height: he(0.5),
+                    height: he(0.6),
                     width: wi(75),
                     color: Colors.grey,
                   ),
@@ -56,7 +51,7 @@ class SignUpPage extends StatelessWidget {
                     color: const Color(0xFF565A57),
                   ),
                   Container(
-                    height: he(0.5),
+                    height: he(0.6),
                     width: wi(75),
                     color: Colors.grey,
                   ),
